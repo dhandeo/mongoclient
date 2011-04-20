@@ -1,0 +1,33 @@
+From a945bc6718162a92a628eeafa04c9d2b25e92a1e Mon Sep 17 00:00:00 2001
+From: Dhanannjay Deo <dhanannjay.deo@kitware.com>
+Date: Wed, 20 Apr 2011 13:40:44 -0400
+Subject: [PATCH] Squashed commit for CMakeLists.txt
+
+---
+ CMakeLists.txt |   14 ++++++++++++++
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+ create mode 100644 CMakeLists.txt
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..32dd95a
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,14 @@
++cmake_minimum_required(VERSION 2.8.4)
++
++# Check the dependencies here
++
++INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
++INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
++
++message(${CMAKE_CURRENT_SOURCE_DIR})
++
++ADD_LIBRARY(mongoclient STATIC
++	# single source file 
++	client/mongo_client_lib.cpp
++	)
++
+-- 
+1.7.1
+
